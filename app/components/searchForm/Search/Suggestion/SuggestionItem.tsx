@@ -1,5 +1,5 @@
 import { useSearchParams } from 'react-router'
-import { TextCharHighlight } from '~/components/common/TextCharHighlight'
+import { TextCharHighlight } from '~/components/common/TextCharHighlight/TextCharHighlight'
 
 type SuggestionItemProps = {
     searchValue: string

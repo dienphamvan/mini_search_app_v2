@@ -1,4 +1,3 @@
-import { useRef } from 'react'
 import { SearchButton } from './SearchButton'
 import { SearchInput } from './SearchInput'
 

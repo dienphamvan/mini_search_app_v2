@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { CrossIcon } from '../../common/icons/CrossIcon'
-import { Suggestion } from './Suggestion'
+import { Suggestion } from './Suggestion/Suggestion'
 
 type SearchInputProps = {
     searchValue: string

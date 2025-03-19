@@ -1,4 +1,4 @@
-import { LionIcon } from '../common/icons/LionIcon'
+import { LionIcon } from '~/components/common/icons/LionIcon'
 
 export function Header() {
     return (

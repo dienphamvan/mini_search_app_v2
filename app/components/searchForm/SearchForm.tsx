@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 import { useSearchParams } from 'react-router'
 import type { SearchResponse } from '~/types'
 import { searchService, suggestService } from '../../service'
-import Loading from '../common/Loading'
-import { List } from './List'
-import { Search } from './Search'
+import Loading from '../common/Loading/Loading'
+import { List } from './List/List'
+import { Search } from './Search/Search'
 
 export function SearchForm() {
     const [searchValue, setSearchValue] = useState('')

@@ -1,5 +1,5 @@
 import type { SearchRecord } from '~/types'
-import { TextOffsetHighLight } from '../../common/TextOffsetHighLight'
+import { TextOffsetHighLight } from '../../common/TestOffsetHighLight/TextOffsetHighLight'
 
 type ListItemProps = {
     data: SearchRecord

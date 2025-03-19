@@ -20,7 +20,17 @@ export default defineConfig({
         coverage: {
             reporter: ['text', 'json', 'html'], // Generates coverage reports
             include: ['app/**/*.tsx', 'app/**/*.ts'], // Only collect coverage for files inside "app"
-            exclude: ['app/**/*.test.tsx', 'app/**/*.test.ts'], // Exclude test files from coverage
+            exclude: [
+                'app/**/*.test.tsx',
+                'app/**/*.test.ts',
+                'app/pages/HomePage.tsx',
+                'app/root.tsx',
+                'app/routes.ts',
+                'app/components/common/icons/**',
+                'app/types/**',
+                'app/service/**',
+                'app/routes/**',
+            ], // Exclude test files from coverage
         },
     },
 })

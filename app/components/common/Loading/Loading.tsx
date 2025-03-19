@@ -1,4 +1,4 @@
-import { SpinIcon } from './icons/SpinIcon'
+import { SpinIcon } from '../icons/SpinIcon'
 
 // Size variants
 const SIZE_MAP = {
