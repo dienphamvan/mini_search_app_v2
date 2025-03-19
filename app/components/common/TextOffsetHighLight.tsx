@@ -1,4 +1,4 @@
-import type { JSX } from 'react'
+import { processHighlights } from '~/utils/processHighlights'
 
 type TextOffsetHighLightProps = {
     text: string
@@ -12,37 +12,23 @@ export function TextOffsetHighLight({
     text,
     highlights = [],
 }: TextOffsetHighLightProps) {
-    if (!highlights.length) return <span>{text}</span>
+    const segments = processHighlights(text, highlights)
 
-    const result: JSX.Element[] = []
+    if (segments.length === 1 && !segments[0].isHighlighted) {
+        return <span>{text}</span>
+    }
 
-    highlights.forEach(({ BeginOffset, EndOffset }, index) => {
-        if (index === 0) {
-            result.push(
-                <span key={`0-${BeginOffset}`}>
-                    {text.slice(0, BeginOffset)}
-                </span>
-            )
-        }
-
-        result.push(
-            <span
-                className='font-extrabold'
-                key={`${BeginOffset}-${EndOffset}`}
-            >
-                {text.slice(BeginOffset, EndOffset)}
-            </span>
-        )
-
-        const nextBeginOffset =
-            highlights[index + 1]?.BeginOffset || text.length
-
-        result.push(
-            <span key={`${EndOffset}-${nextBeginOffset}`}>
-                {text.slice(EndOffset, nextBeginOffset)}
-            </span>
-        )
-    })
-
-    return <span>{result}</span>
+    return (
+        <span>
+            {segments.map((segment) =>
+                segment.isHighlighted ? (
+                    <span className='font-extrabold' key={segment.key}>
+                        {segment.text}
+                    </span>
+                ) : (
+                    <span key={segment.key}>{segment.text}</span>
+                )
+            )}
+        </span>
+    )
 }
