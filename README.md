@@ -1,87 +1,105 @@
-# Welcome to React Router!
+# Project Name
 
-A modern, production-ready template for building full-stack React applications using React Router.
+## Index
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+-   [Live Deployed Link](#live-deployed-link)
+-   [How to Run Locally](#how-to-run-locally)
+    -   [Run with Docker](#run-with-docker)
+    -   [Run with NodeJS](#run-with-nodejs)
+-   [How to Run Automated Tests](#how-to-run-automated-tests)
+-   [Test Coverage Evidences](#test-coverage-evidences)
 
 ---
 
-Built with ❤️ using React Router.
+## Live Deployed Link
+
+You can access the live version of the project here: [Live Deployment](#)
+
+---
+
+## How to Run Locally
+
+1. Clone the repository:
+    ```sh
+    git clone git@github.com:dienphamvan/mini_search_app_v2.git
+    cd mini_search_app_v2
+    ```
+2. Make a copy of .env.example and rename it to .env (you can do it manually or by running the following command):
+    ```sh
+    cp .env.example .env
+    ```
+
+### Run with Docker
+
+1. Ensure you have [Docker](https://www.docker.com/) installed.
+2. Build and run the container:
+
+    ```sh
+    docker build -t mini_search_app .
+    ```
+
+    ```sh
+    docker run -d -p 3001:3000 --name mini_search_app mini_search_app
+    ```
+
+3. The application should now be accessible at `http://localhost:3001`
+
+4. Clean up the container and image:
+
+    ```sh
+    docker stop mini_search_app
+    ```
+
+    ```sh
+    docker rm mini_search_app
+    ```
+
+    ```sh
+    docker rmi mini_search_app
+    ```
+
+### Run with NodeJS
+
+1. Ensure you have [Node.js](https://nodejs.org/) installed.
+2. Install dependencies:
+    ```sh
+    npm install
+    ```
+3. Start the application:
+
+    ```sh
+    npm run build
+    ```
+
+    ```sh
+    npm run start
+    ```
+
+4. The application should now be accessible at `http://localhost:3000`
+
+_Note: You can also run the application in development mode using `npm run dev`._
+
+---
+
+## How to Run Automated Tests
+
+Ensure that Node.js is installed and dependencies are installed (npm install).
+To execute the automated tests, use the following command:
+
+```sh
+npm run test
+```
+
+For a detailed report, run:
+
+```sh
+npm run test:coverage
+```
+
+---
+
+## Test Coverage Evidences
+
+<!-- Image from public folder -->
+
+![coverage](./public/coverge.png)

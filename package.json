@@ -5,14 +5,18 @@
     "scripts": {
         "build": "react-router build",
         "dev": "react-router dev",
-        "start": "react-router-serve ./build/server/index.js",
+        "start": "serve build/client",
         "typecheck": "react-router typegen && tsc",
         "test": "vitest",
-        "coverage": "vitest run --coverage"
+        "coverage": "vitest run --coverage",
+        "docker:build": "docker build -t mini_search_app .",
+        "docker:start": "docker run -d -p 3001:3000 --name mini_search_app mini_search_app",
+        "docker:run": "npm run docker:build && npm run docker:start",
+        "docker:destroy": "docker stop mini_search_app && docker rm mini_search_app"
     },
     "dependencies": {
         "@react-router/node": "^7.3.0",
-        "@react-router/serve": "^7.3.0",
+        "serve": "^14.2.4",
         "isbot": "^5.1.17",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
