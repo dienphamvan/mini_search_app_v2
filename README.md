@@ -13,7 +13,7 @@
 
 ## Live Deployed Link
 
-You can access the live version of the project here: [Live Deployment](#)
+You can access the live version of the project here: [Live Deployment](https://mini-search-app.netlify.app/)
 
 ---
 
