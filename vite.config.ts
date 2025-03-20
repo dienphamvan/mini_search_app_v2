@@ -28,7 +28,6 @@ export default defineConfig({
                 'app/routes.ts',
                 'app/components/common/icons/**',
                 'app/types/**',
-                'app/service/**',
                 'app/routes/**',
             ], // Exclude test files from coverage
         },
