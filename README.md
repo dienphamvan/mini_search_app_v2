@@ -1,13 +1,16 @@
-# Project Name
+# Web Developer Interview
 
-## Index
+## Table of content
 
--   [Live Deployed Link](#live-deployed-link)
--   [How to Run Locally](#how-to-run-locally)
-    -   [Run with Docker](#run-with-docker)
-    -   [Run with NodeJS](#run-with-nodejs)
--   [How to Run Automated Tests](#how-to-run-automated-tests)
--   [Test Coverage Evidences](#test-coverage-evidences)
+- [Live Deployed Link](#live-deployed-link)
+- [Project Structure](#project-structure)
+- [How to Run Locally](#how-to-run-locally)
+  - [Run with Docker](#run-with-docker)
+  - [Run with NodeJS](#run-with-nodejs)
+- [How to Run Automated Tests](#how-to-run-automated-tests)
+- [Technologies Used](#technologies-used)
+- [Preview](#preview)
+
 
 ---
 
@@ -16,6 +19,70 @@
 You can access the live version of the project here: [Live Deployment](https://mini-search-app.netlify.app/)
 
 ---
+
+---
+
+## Project Structure
+
+The project is structured as follows:
+
+```bash
+app
+├── app.css
+├── components
+│   ├── common
+│   │   ├── icons
+│   │   │   ├── CrossIcon.tsx
+│   │   │   ├── LionIcon.tsx
+│   │   │   ├── SearchIcon.tsx
+│   │   │   └── SpinIcon.tsx
+│   │   ├── Loading
+│   │   │   ├── Loading.test.tsx
+│   │   │   └── Loading.tsx
+│   │   ├── TestOffsetHighLight
+│   │   │   ├── TestOffsetHighLight.test.tsx
+│   │   │   └── TextOffsetHighLight.tsx
+│   │   └── TextCharHighlight
+│   │       ├── TextCharHighlight.test.tsx
+│   │       └── TextCharHighlight.tsx
+│   ├── Header.test.tsx
+│   ├── Header.tsx
+│   └── searchForm
+│       ├── List
+│       │   ├── ListItem.test.tsx
+│       │   ├── ListItem.tsx
+│       │   ├── List.test.tsx
+│       │   └── List.tsx
+│       ├── Search
+│       │   ├── SearchButton.tsx
+│       │   ├── SearchInput.test.tsx
+│       │   ├── SearchInput.tsx
+│       │   ├── Search.tsx
+│       │   └── Suggestion
+│       │       ├── SuggestionItem.tsx
+│       │       └── Suggestion.tsx
+│       ├── SearchForm.test.tsx
+│       └── SearchForm.tsx
+├── pages
+│   └── HomePage.tsx
+├── root.tsx
+├── routes
+│   └── home.tsx
+├── routes.ts
+├── service
+│   ├── searchService.test.ts
+│   ├── searchService.ts
+│   ├── suggestService.test.ts
+│   └── suggestService.ts
+├── structure.txt
+├── types
+│   └── index.ts
+└── utils
+    ├── processHighlights.test.ts
+    └── processHighlights.ts
+```
+
+
 
 ## How to Run Locally
 
@@ -37,10 +104,12 @@ You can access the live version of the project here: [Live Deployment](https://m
     ```sh
     docker build -t mini_search_app .
     ```
+    _Note: Above command will build the image with the name `mini_search_app`._
 
     ```sh
     docker run -d -p 3001:3000 --name mini_search_app mini_search_app
     ```
+    _Note: Above command will run the container with the name `mini_search_app` and expose the application on port 3001._
 
 3. The application should now be accessible at `http://localhost:3001`
 
@@ -95,11 +164,18 @@ For a detailed report, run:
 ```sh
 npm run test:coverage
 ```
+![coverage](./docs/coverge.png)
 
 ---
 
-## Test Coverage Evidences
+## Technologies Used
+Frontend: React, TypeScript, Tailwind CSS
+Build Tool: Vite
+Testing: Vitest, React Testing Library
 
-<!-- Image from public folder -->
+## Preview
+Suggestions Feature
+![suggestions](./docs/suggestion.png)
 
-![coverage](./public/coverge.png)
+Search Result
+![search result](./docs/search-result.png)
