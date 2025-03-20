@@ -96,7 +96,7 @@ app
     cp .env.example .env
     ```
 
-### Run with Docker
+#### Run with Docker
 
 1. Ensure you have [Docker](https://www.docker.com/) installed.
 2. Build and run the container:
@@ -127,7 +127,7 @@ app
     docker rmi mini_search_app
     ```
 
-### Run with NodeJS
+#### Run with NodeJS
 
 1. Ensure you have [Node.js](https://nodejs.org/) installed.
 2. Install dependencies:
@@ -152,8 +152,8 @@ _Note: You can also run the application in development mode using `npm run dev`.
 
 ## How to Run Automated Tests
 
-Ensure that Node.js is installed and dependencies are installed (npm install).
-To execute the automated tests, use the following command:
+1. Ensure that Node.js is installed and dependencies are installed (npm install).
+2. To execute the automated tests, use the following command:
 
 ```sh
 npm run test
@@ -169,9 +169,9 @@ npm run test:coverage
 ---
 
 ## Technologies Used
-Frontend: React, TypeScript, Tailwind CSS
-Build Tool: Vite
-Testing: Vitest, React Testing Library
+- Frontend: React, TypeScript, Tailwind CSS
+- Build Tool: Vite
+- Testing: Vitest, React Testing Library
 
 ## Preview
 Suggestions Feature
