@@ -2,15 +2,14 @@
 
 ## Table of content
 
-- [Live Deployed Link](#live-deployed-link)
-- [Project Structure](#project-structure)
-- [How to Run Locally](#how-to-run-locally)
-  - [Run with Docker](#run-with-docker)
-  - [Run with NodeJS](#run-with-nodejs)
-- [How to Run Automated Tests](#how-to-run-automated-tests)
-- [Technologies Used](#technologies-used)
-- [Preview](#preview)
-
+-   [Live Deployed Link](#live-deployed-link)
+-   [Project Structure](#project-structure)
+-   [How to Run Locally](#how-to-run-locally)
+    -   [Run with Docker](#run-with-docker)
+    -   [Run with NodeJS](#run-with-nodejs)
+-   [How to Run Automated Tests](#how-to-run-automated-tests)
+-   [Technologies Used](#technologies-used)
+-   [Preview](#preview)
 
 ---
 
@@ -82,8 +81,6 @@ app
     └── processHighlights.ts
 ```
 
-
-
 ## How to Run Locally
 
 1. Clone the repository:
@@ -104,11 +101,13 @@ app
     ```sh
     docker build -t mini_search_app .
     ```
+
     _Note: Above command will build the image with the name `mini_search_app`._
 
     ```sh
     docker run -d -p 3001:3000 --name mini_search_app mini_search_app
     ```
+
     _Note: Above command will run the container with the name `mini_search_app` and expose the application on port 3001._
 
 3. The application should now be accessible at `http://localhost:3001`
@@ -162,18 +161,21 @@ npm run test
 For a detailed report, run:
 
 ```sh
-npm run test:coverage
+npm run coverage
 ```
+
 ![coverage](./docs/coverge.png)
 
 ---
 
 ## Technologies Used
-- Frontend: React, TypeScript, Tailwind CSS
-- Build Tool: Vite
-- Testing: Vitest, React Testing Library
+
+-   Frontend: React, TypeScript, Tailwind CSS
+-   Build Tool: Vite
+-   Testing: Vitest, React Testing Library
 
 ## Preview
+
 Suggestions Feature
 ![suggestions](./docs/suggestion.png)
 
